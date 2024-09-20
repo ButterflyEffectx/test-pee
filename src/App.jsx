@@ -1,9 +1,11 @@
 import  { useState } from 'react';
+import moodengPhoto from '../src/Moodag.jpeg';
+import myPhoto from '../src/Me.jpg';
 
 const FeedAMoodeng = () => {
   const [level, setLevel] = useState(0);
   const [size, setSize] = useState(100); 
-  const [image, setImage] = useState('src/Moodag.jpeg'); 
+  const [image, setImage] = useState(moodengPhoto); 
 
   const handleFeed = (food) => {
     let levelIncrease = 0;
@@ -19,7 +21,7 @@ const FeedAMoodeng = () => {
 
   
     if (newLevel > 100) {
-      setImage('src/Me.jpg');
+      setImage(myPhoto);
     }
   };
 
